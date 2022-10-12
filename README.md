@@ -138,14 +138,14 @@ scrape_configs:
 
 =======================grafana配置集监控面板=============================
 
-0、安装好clickhouse数据源插件：https://grafana.com/grafana/plugins/vertamedia-clickhouse-datasource/
+1、安装好clickhouse数据源插件：https://grafana.com/grafana/plugins/vertamedia-clickhouse-datasource/
 
-1、安装好同比环比数据源插件：https://github.com/AutohomeCorp/autohome-compareQueries-datasource
+2、安装好同比环比数据源插件：https://github.com/AutohomeCorp/autohome-compareQueries-datasource
 
-2、配置好同比环比数据源
+3、配置好同比环比数据源
 
-3、配置好prometheus数据源
+4、配置好prometheus数据源
 
-4、配置好clickhouse集群中各个节点的数据源
+5、配置好clickhouse集群中直连各个节点的数据源
 
-5、导入ClickHouse-cluster-monitor-dashboard.json面板
+6、导入ClickHouse-cluster-monitor-dashboard.json面板
