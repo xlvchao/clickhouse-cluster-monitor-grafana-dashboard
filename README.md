@@ -1,6 +1,6 @@
 # 简介
 
-ClickHouse集群监控技术方案分享，基于Promrtheus+node_exporter+Grafana实现，主要提供对CH集群的性能指标、业务指标的监控，提供对ZK集群的性能指标、业务指标的监控。自由且高度定制化，方便用户按需修改！
+ClickHouse集群监控技术方案分享，基于Prometheus+node_exporter+Grafana实现，主要提供对CH集群的性能指标、业务指标的监控，提供对ZK集群的性能指标、业务指标的监控。自由且高度定制化，方便用户按需修改！
 
 
 
