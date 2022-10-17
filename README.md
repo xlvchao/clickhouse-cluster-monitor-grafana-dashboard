@@ -208,7 +208,7 @@ scrape_configs:
 
 4、配置prometheus数据源
 
-6、导入Clickhouse-Cluster-Monitor-Dashboard.json面板
+6、导入clickhouse-cluster-monitor-dashboard.json面板
 ```
 
 
