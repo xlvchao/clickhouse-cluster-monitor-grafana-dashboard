@@ -1,3 +1,9 @@
+# 简介
+
+ClickHouse集群监控技术方案分享，基于Promrtheus+node_exporter+Grafana实现，主要提供对CH集群的性能指标、业务指标的监控，提供对ZK集群的性能指标、业务指标的监控。自由且高度定制化，方便用户按需修改！
+
+
+
 # 视觉盛宴
 
 ![](images/1.png)
@@ -60,7 +66,19 @@ WantedBy=multi-user.target
 
 
 
-## 2、Zookeeper配置文件中添加监控类配置（为Prometheus提供Zookeeper监控数据源）
+## 2、CH集群每个节点的配置文件中需放开log_queries配置
+
+```shell
+  <!-- Profiles of settings. -->
+    <profiles>
+        <!-- Default settings. -->
+        <default>
+             <log_queries>1</log_queries>
+```
+
+
+
+## 3、Zookeeper配置文件中添加监控类配置（为Prometheus提供Zookeeper监控数据源）
 
 ```shell
 官方文档：https://github.com/apache/zookeeper/blob/master/zookeeper-docs/src/main/resources/markdown/zookeeperMonitor.md#Prometheus
@@ -72,7 +90,7 @@ WantedBy=multi-user.target
 
 
 
-## 3、单独搞一台机器安装prometheus
+## 4、单独搞一台机器安装prometheus
 
 ```shell
 1、wget https://github.com/prometheus/prometheus/releases/download/v2.38.0/prometheus-2.38.0.linux-amd64.tar.gz
@@ -177,7 +195,7 @@ scrape_configs:
 
   
 
-## 4、grafana导入集监控面板
+## 5、grafana导入集监控面板
 
 ```shell
 1、安装clickhouse数据源插件：https://grafana.com/grafana/plugins/vertamedia-clickhouse-datasource/
